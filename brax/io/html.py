@@ -72,6 +72,8 @@ _HTML = """
       import {Viewer} from 'https://cdn.jsdelivr.net/gh/google/brax@v0.0.15/js/viewer.js';
       const domElement = document.getElementById('brax-viewer');
       var viewer = new Viewer(domElement, system);
+      // Toggle off 'follow target' by default.
+      setTimeout(() => document.getElementById("brax-viewer").parentElement.getElementsByTagName("input")[1].click(), 100)
     </script>
   </body>
 </html>
