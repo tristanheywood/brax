@@ -86,7 +86,7 @@ def vmap(fun: F, include: Optional[Sequence[bool]] = None) -> F:
           b_args.append(a)
       rets.append(fun(*b_args))
 
-    return jax.tree_util.tree_map(lambda *x: onp.stack(x), *rets)
+    return jax.tree_util.tree_map(lambda *x: jnp.stack(x), *rets)
 
   return _batched
 
